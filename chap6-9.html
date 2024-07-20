@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <script>
+    // 1. Write a program to take a number in a variable, do the
+        // required arithmetic to display the following result in your
+        // browser:
+        document.write(`<h2> 1st  <h2>`)
+        var a = 10;
+        document.write(`<h3>Result: <br> The value of a is = ${a}</h3>`);
+        var dot = "<h4>..............................<h4>"
+        document.write(dot)
+        ++a
+        document.write(`The value of ++a is: ${a}<br>`)
+        document.write(`Now the value of a is: ${a}`)
+        document.write(`<br>`)
+        document.write(`<br>`)
+        document.write(`<br>`)
+        
+        document.write(`the value of a++ is:${a}<br>`)
+        a++
+        document.write(`Now the value of a is: ${a}`)
+        document.write(`<br>`)
+        document.write(`<br>`)
+        document.write(`<br>`)
+        --a
+        document.write(`the value of --a is: ${a}<br>`)
+        document.write(`Now the value of a is: ${a}`)
+        
+        document.write(`<br>`)
+        document.write(`<br>`)
+        document.write(`<br>`)
+        document.write(`the value of a-- is: ${a}<br>`)
+        a--
+        document.write(`Now the value of a is: ${a}`)
+        
+        // 2. What will be the output in variables a, b & result after
+        // execution of the following script:
+        // var a = 2, b = 1;
+        // var result = --a - --b + ++b + b--;
+        // Explain the output at each stage:
+        // --a;
+        // --a - --b;
+        // --a - --b + ++b;
+        // --a - --b + ++b + b--;
+        
+        document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(`<br>`);
+        
+        document.write(`<h2> 2nd  <h2>`);
+        var a1 = 2;
+        var b1 = 1;
+        var result = --a1 - --b1 + ++b1  + b1--;
+            
+        document.write(`a = ${a1}<br>`);
+        document.write(`b = ${b1}<br>`);
+        document.write(`<br>`);
+        --a1
+        document.write(`First Step<br>`);
+        document.write(`<h3>a is decremented from 2 to 1= ${a1}<h3>`);
+        document.write(`<br>`);
+        
+        document.write(`Second Step<br>`);
+        document.write(`<h3>now we again do pre decrement --a now a value is 0 and we do pre-decreement of --b so b become 0 when we minus 0 and 0 we get = ${--a1 - --b1}<br>`);
+        document.write(`<br>`)
+        document.write(`Third Step<br>`);
+        document.write(`here we again do pre decreement of a  is decremented from 0 to -1,again we do pre-decrement b so b is decremented from 0 to -1 and b is pre-increement also from -1 to 0 so -1 -(-1)+0=  ${  + ++b1}<br>`)
+        document.write(`<br>`);
+        
+        document.write(`Fourth Step<br>`);
+        document.write(`here we again do pre decreement of a  is decremented from -1 to -2,again we do pre-decrement b so b is decremented from 0 to -1 and b is pre-increement also from -1 to 0 and we do post-decrement of b so b is post decremented 0  to -1 now we have -2 -(-1)+ 0 + 0 <h2>Result=  ${--a1 - --b1 + ++b1 + b1--}<h2><br>`)
+        
+        document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(`<br>`);
+        
+        document.write(`<h2> 3rd  <h2>`);
+        
+        document.write(`<br>`);
+        
+        document.write(`This 3rd assignment is alert`)
+        // 3. Write a program that takes input a name from user &
+        // greet the user.
+        
+        var name = prompt("what is your name")
+        var greet = name +(" you are welcome")
+        alert(greet)
+        
+        document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(`<br>`);
+        
+        document.write(`<h2> 4th  <h2>`);
+        
+        // 5. Write a program to take input a number from user &
+        // display it’s multiplication table on your browser. If user
+        // does not enter a new number, multiplication table of 5
+        // should be displayed by default.
+        
+        var number = prompt("write a number","5")
+        var defaullt = number || 5
+        
+         for (let i = 1; i <= 10; i++){
+            document.write(`${number} x ${i} = ${number*i}<br>`)
+         } 
+         document.write(`<br>`);
+        document.write(`<br>`);
+        document.write(`<br>`);
+        
+        document.write(`<h2> 6th  <h2>`);
+        
+        
+        
+        
+       //  6. Take
+// a) Take three subjects name from user and store them in 3
+// different variables.
+// b) Total marks for each subject is 100, store it in another
+// variable.
+// c) Take obtained marks for first subject from user and
+// stored it in different variable.
+// d) Take obtained marks for remaining 2 subjects from user
+// and store them in variables.
+// e) Now calculate total marks and percentage and show the
+// result in browser like this.(Hint: user table)
+
+
+
+
+var sub1 = 'English';
+var sub2 = 'Urdu';
+var sub3 = 'Math';
+
+var totalMarks = 300;
+
+var obtainMarks1 = 54;
+var obtainMarks2 = 54;
+var obtainMarks3 = 48;
+ var obtained = obtainMarks1 + obtainMarks2 +obtainMarks3
+var percentage = obtained  / 100 * 100
+var subPer = obtainMarks1 / 100 * 100
+var subPer2 = obtainMarks2 / 100 * 100
+var subPer3 = (obtainMarks3 / (100) )* 100
+var totalPercentage = subPer + subPer2 + subPer3
+var obtainedPercentage = obtained / totalMarks  * 100
+document.write(`<br> <br> <table> <tr><th> Subjects </th> <th>Total Marks</th> <th>Obtain Marks</th> <th>Percentage</th></tr> <tr> <td>English</td> <td>100</td> <td>54</td> <td>${subPer}%</td> </tr> <tr> <td> Urdu </td> <td>100</td> <td>54</td> <td>${subPer2}%</td> </tr> <tr> <td>Math</td> <td>100</td> <td>48</td> <td>${subPer3}%</td></tr> <tr><td>TotalMarks </td> <td>${totalMarks}</td> <td>${obtained}</td> <td> ${obtainedPercentage}%</td></tr></table> <br> `)
+        </script>
+</body>
+</html>
